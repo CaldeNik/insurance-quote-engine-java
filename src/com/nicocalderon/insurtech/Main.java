@@ -1,7 +1,6 @@
 package com.nicocalderon.insurtech;
 
-import com.nicocalderon.insurtech.model.Driver;
-import com.nicocalderon.insurtech.model.Vehicle;
+import com.nicocalderon.insurtech.model.*;
 import com.nicocalderon.insurtech.service.QuoteService;
 
 import java.util.Scanner;
@@ -18,20 +17,34 @@ public class Main {
 
         System.out.print("Cantidad de siniestros: ");
         int accidents = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.print("Tipo de vehículo: ");
-        String type = scanner.nextLine();
 
         System.out.print("Valor del vehículo: ");
-        double value = scanner.nextDouble();
+        double vehicleValue = scanner.nextDouble();
+
+        System.out.println("\nTipo de cobertura:");
+        System.out.println("1 - Responsabilidad Civil");
+        System.out.println("2 - Terceros Completo");
+        System.out.println("3 - Todo Riesgo");
+
+        int option;
+        do {
+            System.out.print("Elegí una opción (1-3): ");
+            option = scanner.nextInt();
+        } while (option < 1 || option > 3);
+
+        CoverageType coverage = switch (option) {
+            case 1 -> CoverageType.THIRD_PARTY;
+            case 2 -> CoverageType.THIRD_PARTY_FIRE_THEFT;
+            default -> CoverageType.FULL_COVERAGE;
+        };
 
         Driver driver = new Driver(age, accidents);
-        Vehicle vehicle = new Vehicle(type, value);
+        QuoteService service = new QuoteService();
 
-        QuoteService quoteService = new QuoteService();
-        double premium = quoteService.calculateQuote(driver, vehicle);
+        double quote = service.calculateQuote(vehicleValue, driver, coverage);
 
-        System.out.println("Prima estimada: $" + premium);
+        System.out.println("\n👉 Prima mensual estimada: $" + quote);
+        String risk = service.getRiskLevel(driver);
+        System.out.println("Nivel de riesgo: " + risk);
     }
 }
