@@ -1,5 +1,6 @@
-# 🚗 Insurance Quote Engine (Java)
-
+![Java](https://img.shields.io/badge/Java-Backend-blue)
+![Estado](https://img.shields.io/badge/estado-en%20desarrollo-yellow)
+![Dominio](https://img.shields.io/badge/dominio-Insurtech-green)# 🚗 Insurance Quote Engine (Java)
 ## 📌 Descripción
 
 Motor de cotización de seguros automotores desarrollado en Java que simula reglas reales de tarificación del sector asegurador.
@@ -7,6 +8,52 @@ Motor de cotización de seguros automotores desarrollado en Java que simula regl
 Este proyecto forma parte de mi transición profesional hacia el desarrollo backend dentro del ecosistema **Insurtech**, combinando más de 12 años de experiencia en seguros con habilidades técnicas en programación.
 
 ---
+
+## 🆕 Versión 2 – Motor de Cotización Interactivo
+
+Esta versión incorpora un simulador de cotización de seguros por consola que permite ingresar datos reales y obtener una prima estimada basada en factores de riesgo.
+
+### ✨ Funcionalidades
+
+- Ingreso de datos por consola
+- Evaluación de riesgo del conductor
+- Selección del tipo de cobertura
+- Cálculo dinámico de la prima
+- Clasificación del nivel de riesgo (BAJO / MEDIO / ALTO)
+- Validación básica de opciones ingresadas
+
+### 🧠 Lógica de Negocio Implementada
+
+La prima se calcula en base a:
+
+- Edad del conductor
+- Historial de siniestros
+- Valor del vehículo
+- Tipo de cobertura
+
+Este modelo simula reglas reales de suscripción utilizadas en seguros automotores.
+
+### ▶️ Cómo ejecutar el proyecto
+
+1. Clonar el repositorio
+2. Abrir el proyecto en IntelliJ IDEA
+3. Ejecutar `Main.java`
+4. Ingresar los datos solicitados en la consola
+
+### 🧪 Ejemplo de ejecución
+=== COTIZADOR DE SEGURO AUTOMOTOR ===
+Edad del conductor: 30
+Cantidad de siniestros: 1
+Valor del vehículo: 8000000
+
+Tipo de cobertura:
+1 - Responsabilidad Civil
+2 - Terceros Completo
+3 - Todo Riesgo
+
+👉 Prima mensual estimada: $192000.0
+Nivel de riesgo: MEDIO
+
 
 ## 🎯 Objetivo del proyecto
 
