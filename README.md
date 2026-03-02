@@ -1,6 +1,7 @@
 ![Java](https://img.shields.io/badge/Java-Backend-blue)
 ![Estado](https://img.shields.io/badge/estado-en%20desarrollo-yellow)
-![Dominio](https://img.shields.io/badge/dominio-Insurtech-green)# 🚗 Insurance Quote Engine (Java)
+![Dominio](https://img.shields.io/badge/dominio-Insurtech-green)
+# 🚗 Insurance Quote Engine (Java)
 ## 📌 Descripción
 
 Motor de cotización de seguros automotores desarrollado en Java que simula reglas reales de tarificación del sector asegurador.
